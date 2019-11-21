@@ -38,6 +38,7 @@ def initialize(grove_motor, **kwargs):
                          pin_state_bytes=pin_state_bytes, **kwargs)
     print(new_config)
     grove_motor.config = new_config
+    time.sleep_ms(10)
     # Re-initialize according to the new configuration.
     grove_motor.load_config()
 
